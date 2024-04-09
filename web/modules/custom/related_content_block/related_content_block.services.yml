@@ -1,0 +1,4 @@
+services:
+  related_content_block.related_content_service:
+    class: Drupal\related_content_block\Service\RelatedContentService
+    arguments: ['@entity_type.manager', '@database']
