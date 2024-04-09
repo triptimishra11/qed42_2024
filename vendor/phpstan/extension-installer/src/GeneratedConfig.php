@@ -12,7 +12,7 @@ final class GeneratedConfig
 	public const EXTENSIONS = array (
   'composer/composer' => 
   array (
-    'install_path' => '/app/vendor/composer/composer',
+    'install_path' => '/opt/drupal/vendor/composer/composer',
     'relative_install_path' => '../../../composer/composer',
     'extra' => 
     array (
@@ -25,7 +25,7 @@ final class GeneratedConfig
   ),
   'mglaman/phpstan-drupal' => 
   array (
-    'install_path' => '/app/vendor/mglaman/phpstan-drupal',
+    'install_path' => '/opt/drupal/vendor/mglaman/phpstan-drupal',
     'relative_install_path' => '../../../mglaman/phpstan-drupal',
     'extra' => 
     array (

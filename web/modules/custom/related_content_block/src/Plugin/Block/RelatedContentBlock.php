@@ -59,6 +59,7 @@ class RelatedContentBlock extends BlockBase implements ContainerFactoryPluginInt
    */
   public function build() {
     // Get the current node ID
+    $node = \Drupal::routeMatch()->getParameter('node')->id();
     $current_node_id = \Drupal::routeMatch()->getParameter('node')->id();
     // Fetch related content.
     $related_content = $this->relatedContentService->fetchRelatedContent($current_node_id);
@@ -74,8 +75,9 @@ class RelatedContentBlock extends BlockBase implements ContainerFactoryPluginInt
     $build = [
       '#theme' => 'related_content_block',
       '#items' => $items,
+      '#max-age' => 0,
     ];
-
+    $build['#cache']['max-age'] = 0;
     return $build;
   }
 
